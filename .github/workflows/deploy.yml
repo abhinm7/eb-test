@@ -29,6 +29,6 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ap-south-1
         run: |
-          eb init getting-started --platform node.js --region $AWS_REGION --interactive=false
+          eb init getting-started --platform node.js --region $AWS_REGION <<< "Y"
           eb use getting-started-env
           eb deploy
