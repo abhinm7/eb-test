@@ -11,7 +11,7 @@ app.get('/hello', (req, res) => {
 app.get('/env',(req,res)=>{
   let env_text = process.env.SAMPLE_ENV;
   console.log("env text extracted :",env_text);
-  res.send(env_text)
+  res.send(env_text || "Not defined")
 })
 
 const PORT = process.env.PORT || 3000;
